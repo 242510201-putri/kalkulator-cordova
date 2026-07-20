@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* ungu lebih kalem */
+  background: linear-gradient(135deg, #f3e5f5, #ce93d8);
+
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 380px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* 🔥 DISPLAY TANPA KOTAK */
+#display {
+  height: 30%;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  text-align: right;
+  font-size: 48px;
+  padding: 20px 10px;
+
+  color: #6a1b9a;
+}
+
+/* GRID */
+.buttons {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+/* BUTTON */
+button {
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+
+  background: #f3e5f5;
+  color: #4a148c;
+
+  transition: 0.2s;
+}
+
+button:active {
+  transform: scale(0.93);
+}
+
+/* FUNCTION */
+.function {
+  background: #e1bee7;
+  color: #6a1b9a;
+}
+
+/* OPERATOR */
+.operator {
+  background: #ab47bc;
+  color: white;
+}
+
+/* EQUAL */
+.equal {
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+  color: white;
+}
+
+/* ZERO */
+.zero {
+  grid-column: span 2;
+  border-radius: 25px;
+}
+
+/* hover */
+button:hover {
+  filter: brightness(1.05);
+}
